@@ -6,7 +6,11 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => res.send('ด้วยมนต์แห่ง 250!'))
-app.get("/Home", (req, res) => {
+
+app.use("/public", express.static("public"));
+//http://localhost:3000/public
+
+app.get("/namo", (req, res) => {
     const day = req.query.day;
     const story = req.query.story;
     const time = req.query.time;
