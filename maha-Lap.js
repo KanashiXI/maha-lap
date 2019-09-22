@@ -22,7 +22,7 @@ class MahaLap {
             case "คริสมาสต์":
                 return 25;
             default:
-                return "แล้วแต่อยากซื้อ"
+                return 77;
         }
     }
 
@@ -52,20 +52,19 @@ class MahaLap {
             }
         }
     }
-    // static tamnaiWithStory(story) {
-    //     const n = story.length;
-    //     let sum = 0;
-    //     for (let i = 1; i <= n; i++) {
-    //         sum += i;
-    //     }
-    //     return sum % 100;
-    // }
 
-    // static tamnaiWithTime(time) {
+    static TwoFiveZero(day, time, story) {
+        const resultDay = this.tamnaiWithDay(day);
+        const resultTime = this.tamnaiWithTime(time);
+        const resultStory = this.tamnaiWithStory(story);
 
+        let num = resultDay + (resultTime * 100) + resultStory;
 
-    // }
-
+        if (num < 100) {
+            return num * 10;
+        } else
+            return num;
+    }
 
 
 }

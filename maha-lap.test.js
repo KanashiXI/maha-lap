@@ -53,7 +53,7 @@ describe("Test Maha-Lap", () => {
 
     test("Test Tamnai with ETC expect UptoYou", () => {
         const result = MahaLap.tamnaiWithDay(60);
-        expect(result).toEqual("แล้วแต่อยากซื้อ");
+        expect(result).toEqual(77);
     });
 
     test("Test Tamnai with Words expect 3", () => {
@@ -100,6 +100,18 @@ describe("Test Maha-Lap", () => {
         global.Math.random = jest.fn(() => 0.5);
         const result = MahaLap.tamnaiWithTime("กลางคืน");
         expect(result).toEqual(0.5);
+    });
+
+    test("Test Tamnai with ฝันอาทิตย์ ตอนกลางวัน สอบเนตเวิร์ค", () => {
+        global.Math.random = jest.fn(() => 0.89);
+        const result = MahaLap.TwoFiveZero("อาทิตย์", "กลางวัน", "สอบเนตเวิร์ค"); //1+(0.89*100)+78
+        expect(result).toEqual(168);
+    });
+
+    test("Test Tamnai with ฝันจันทร์ ตอนกลางคืน เจอแมว", () => {
+        global.Math.random = jest.fn(() => 0.32);
+        const result = MahaLap.TwoFiveZero("จันทร์", "กลางคืน", "เจอแมว"); //2+(0.32*100)+21
+        expect(result).toEqual(550);
     });
 
 });
