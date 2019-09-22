@@ -36,7 +36,7 @@ class MahaLap {
     }
 
     static tamnaiWithTime(time) {
-        const randomNumber = Math.random();
+        const randomNumber = Math.floor(Math.random() * 100);
 
         if (time === "กลางวัน") {
             if (randomNumber >= 0.5) {
