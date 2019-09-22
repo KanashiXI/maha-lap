@@ -5,13 +5,13 @@ const MahaLap = require("./maha-Lap");
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => res.send('250!'))
+app.get('/', (req, res) => res.send('ด้วยมนต์แห่ง 250!'))
 app.get("/Home", (req, res) => {
     const day = req.query.day;
     const story = req.query.story;
     const time = req.query.time;
 
-    const theHolyNumber = MahaLap.TwoFiveZero(day, story, time);
+    const theHolyNumber = MahaLap.TwoFiveZero(day, time, story);
 
     res.json({
         result: theHolyNumber

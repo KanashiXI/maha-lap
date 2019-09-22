@@ -57,9 +57,9 @@ class MahaLap {
         const resultDay = this.tamnaiWithDay(day);
         const resultTime = this.tamnaiWithTime(time);
         const resultStory = this.tamnaiWithStory(story);
-
+        console.log(day, story, time)
         let num = resultDay + (resultTime * 100) + resultStory;
-
+        console.log(resultTime)
         if (num < 100) {
             return num * 10;
         } else
