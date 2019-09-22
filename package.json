@@ -1,0 +1,19 @@
+{
+  "name": "maha-lap",
+  "version": "1.0.0",
+  "description": "WU 2019 with Wisesight",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KanashiXI/maha-lap.git"
+  },
+  "author": "Panyapat Jueaboon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KanashiXI/maha-lap/issues"
+  },
+  "homepage": "https://github.com/KanashiXI/maha-lap#readme"
+}
