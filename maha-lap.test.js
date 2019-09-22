@@ -56,5 +56,38 @@ describe("Test Maha-Lap", () => {
         expect(result).toEqual("แล้วแต่อยากซื้อ");
     });
 
+    test("Test Tamnai with Words expect 3", () => {
+        const result = MahaLap.tamnaiWithStory("งู");
+        expect(result).toEqual(3);
+    });
+
+    test("Test Tamnai with Words expect 6", () => {
+        const result = MahaLap.tamnaiWithStory("แมว");
+        expect(result).toEqual(6);
+    });
+
+    test("Test Tamnai with time กลางวัน random = 0.98 return 0.98", () => {
+        global.Math.random = jest.fn(() => 0.98);
+        const result = MahaLap.tamnaiWithTime("กลางวัน");
+        expect(result).toEqual(0.98);
+    });
+
+    test("Test Tamnai with time กลางวัน random = 0.4 return 0.5", () => {
+        global.Math.random = jest.fn(() => 0.4);
+        const result = MahaLap.tamnaiWithTime("กลางวัน");
+        expect(result).toEqual(0.5);
+    });
+
+    test("Test Tamnai with time กลางวัน random = 0.4 return 0.4", () => {
+        global.Math.random = jest.fn(() => 0.4);
+        const result = MahaLap.tamnaiWithTime("กลางคืน");
+        expect(result).toEqual(0.4);
+    });
+
+    test("Test Tamnai with time กลางวัน random = 0.6 return 0.5", () => {
+        global.Math.random = jest.fn(() => 0.6);
+        const result = MahaLap.tamnaiWithTime("กลางคืน");
+        expect(result).toEqual(0.5);
+    });
 
 });
